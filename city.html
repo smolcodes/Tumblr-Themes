@@ -1,0 +1,814 @@
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle}</title>
+    <meta property="og:title" content="{Title}" />
+    <meta property="og:site_name" content="{Title}" />
+    <meta name="description" content="{MetaDescription}" />
+    <meta property="og:description" content="{MetaDescription}" />
+    <meta property="og:url" content="{PortraitURL-64}" />
+    <meta property="og:type" content="blog" />
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+<!--------------------------------------------
+Les Miserables v.1 by Dubious Radical
+Please DO NOT remove
+Questions? Ask @ www.dubiousradical.me
+-Learn German! kindergarden means children's garden
+---------------------------------------------->
+<meta name="image:Side" content=""/>
+<meta name="image:Background" content=""/>
+<meta name="if:Infinite Scroll" content="0"/>
+<meta name="if:Sassy Responses" content="0">
+<meta name="if:Show Tags" content="1">
+<meta name="if:Background Cover Image" content="0">
+<meta name="color:Text" content="#3d3030">
+<meta name="color:Background" content="#f8f8f8">
+<meta name="color:Menu" content="#f8f8f8"/>
+<meta name="color:Link" content="#4c8ca7"/>
+<meta name="color:Link Hover" content="#c24e4e"/>
+<meta name="color:Blockquote" content="#f3c061"/>
+<meta name="select:Columns" content="one" title="One">
+<meta name="select:Columns" content="two" title="Two">
+<meta name="text:Font Size" content="18px">
+<meta name="text:Google Analytics ID" content=""/>
+<meta name="text:Disqus Shortname" content=""/>
+<meta name="text:Youtube Name" content=""/>
+<meta name="text:Deviantart Name" content=""/>
+<meta name="text:Pinterest Name" content=""/>
+<meta name="text:Facebook Name" content=""/>
+<meta name="text:Wordpress Name" content=""/>
+<meta name="text:Quora Name" content=""/>
+<!-------------Google Fonts--------------------->
+<meta name="text:Google Font Title" content="Monda">
+<link href='http://fonts.googleapis.com/css?family={text:Google Font Title}' rel='stylesheet' type='text/css'>
+<meta name="text:Google Font Body" content="Monda">
+	</head>
+<style>
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}body{margin:0;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;margin:0.67em 0;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:bold;}dfn{font-style:italic;}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em;}pre{white-space:pre-wrap;}q{quotes:"\201C" "\201D" "\2018" "\2019";}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}img{border:0;}svg:not(:root){overflow:hidden;}figure{margin:0;}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{border:0;padding:0;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,select{text-transform:none;}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}button[disabled],html input[disabled]{cursor:default;}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}
+*,
+*:after,
+*::before {
+    	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+}
+
+@font-face {
+    	font-weight: normal;
+		font-style: normal;
+		font-family: 'ecoicons';
+		src: url("http://static.tumblr.com/r4e6ztn/gpXmrnm80/ecoicons.eot");
+		src: url("../fonts/ecoicons/ecoicons.eot?#iefix") format("embedded-opentype"), url("http://static.tumblr.com/r4e6ztn/Lohmrnm99/ecoicons.woff") format("woff"), url("http://static.tumblr.com/r4e6ztn/WjTmrnme4/ecoicons.ttf") format("truetype"), url("../fonts/ecoicons/ecoicons.svg#ecoicons") format("svg");
+}
+
+/* Icomoon.com */
+
+.gn-menu-main,
+.gn-menu-main ul {
+		margin: 0;
+		padding: 0;
+		background: clear;
+		color: #5f6f81;
+		list-style: none;
+		text-transform: none;
+		font-weight: 300;
+		font-family: 'Lato', Arial, sans-serif;
+		line-height: 60px;
+        z-index:900;
+}
+
+.gn-menu-main {position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 60px;
+		font-size: 13px;
+        background:clear;
+}
+
+.gn-menu-main a {
+		display: block;
+		height: 100%;
+		color: #c1c9d1;
+		text-decoration: none;
+		cursor: pointer;
+}
+.no-touch .gn-menu-main a:hover,
+.no-touch .gn-menu li.gn-search-item:hover,
+.no-touch .gn-menu li.gn-search-item:hover a {
+		background:{color:Link Hover};
+		color: white;
+}
+.gn-menu-main a:hover {background:{color:Link Hover};
+                       color:{color:Link};}
+.gn-menu-main > li {
+		display: block;
+		float: left;
+		height: 100%;
+		border-right: 1px solid #c6d0da;
+		text-align: center;
+}
+
+/* icon-only trigger (menu item) */
+
+.gn-menu-main li.gn-trigger {
+		position: relative;
+		width: 60px;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+}
+.gn-menu-main > li > a {
+		padding: 0 30px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: bold;
+}
+
+.gn-menu-main:after {
+		display: table;
+		clear: both;
+		content: "";
+}
+
+.gn-menu-wrapper {
+		position: fixed;
+		top: 60px;
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+		width: 60px;
+		border-top: 1px solid #c6d0da;
+		background: clear;
+		-webkit-transform: translateX(-60px);
+		-moz-transform: translateX(-60px);
+		transform: translateX(-60px);
+		-webkit-transition: -webkit-transform 0.3s, width 0.3s;
+		-moz-transition: -moz-transform 0.3s, width 0.3s;
+		transition: transform 0.3s, width 0.3s;
+}
+
+.gn-scroller {
+		position: absolute;
+		overflow-y: scroll;
+		width: 370px;
+		height: 100%;
+}
+
+.gn-menu {
+		border-bottom: 1px solid #c6d0da;
+		text-align: left;
+		font-size: 18px;
+}
+
+.gn-menu li:not(:first-child),
+.gn-menu li li {
+		box-shadow: inset 0 1px #c6d0da
+}
+
+.gn-submenu li {
+		overflow: hidden;
+		height: 0;
+		-webkit-transition: height 0.3s;
+		-moz-transition: height 0.3s;
+		transition: height 0.3s;
+}
+
+.gn-submenu li a {
+		color: #c1c9d1
+}
+
+input.gn-search {
+		position: relative;
+		z-index: 10;
+		padding-left: 60px;
+		outline: none;
+		border: none;
+		background: transparent;
+		color: #5f6f81;
+		font-weight: 300;
+		font-family: 'Lato', Arial, sans-serif;
+		cursor: pointer;
+}
+
+/* placeholder */
+
+.gn-search::-webkit-input-placeholder {
+		color: #5f6f81
+}
+
+.gn-search:-moz-placeholder {
+		color: #5f6f81
+}
+
+.gn-search::-moz-placeholder {
+		color: #5f6f81
+}
+
+.gn-search:-ms-input-placeholder {
+		color: #5f6f81
+}
+
+/* hide placeholder when active in Chrome */
+
+.gn-search:focus::-webkit-input-placeholder,
+.no-touch .gn-menu li.gn-search-item:hover .gn-search:focus::-webkit-input-placeholder {
+		color: transparent
+}
+
+input.gn-search:focus {
+		cursor: text
+}
+
+.no-touch .gn-menu li.gn-search-item:hover input.gn-search {
+		color: white
+}
+
+/* placeholder */
+
+.no-touch .gn-menu li.gn-search-item:hover .gn-search::-webkit-input-placeholder {
+		color: white
+}
+
+.no-touch .gn-menu li.gn-search-item:hover .gn-search:-moz-placeholder {
+		color: white
+}
+
+.no-touch .gn-menu li.gn-search-item:hover .gn-search::-moz-placeholder {
+		color: white
+}
+
+.no-touch .gn-menu li.gn-search-item:hover .gn-search:-ms-input-placeholder {
+		color: white
+}
+
+.gn-menu-main a.gn-icon-search {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 60px;
+}
+
+.gn-icon::before {
+		display: inline-block;
+		width: 60px;
+		text-align: center;
+		text-transform: none;
+		font-weight: normal;
+		font-style: normal;
+		font-variant: normal;
+		font-family: 'ecoicons';
+		line-height: 1;
+		speak: none;
+		-webkit-font-smoothing: antialiased;
+}
+
+.gn-icon-help::before {
+		content: "\e000"
+}
+
+.gn-icon-earth::before {
+		content: "\e004"
+}
+
+.gn-icon-cog::before {
+		content: "\e006"
+}
+
+.gn-icon-search::before {
+		content: "\e005"
+}
+
+.gn-icon-download::before {
+		content: "\e007"
+}
+
+.gn-icon-photoshop::before {
+		content: "\e001"
+}
+
+.gn-icon-illustrator::before {
+		content: "\e002"
+}
+
+.gn-icon-archive::before {
+		content: "\e00d"
+}
+
+.gn-icon-article::before {
+		content: "\e003"
+}
+
+.gn-icon-pictures::before {
+		content: "\e008"
+}
+
+.gn-icon-videos::before {
+		content: "\e009"
+}
+
+/* if an icon anchor has a span, hide the span */
+
+.gn-icon span {
+		width: 0;
+		height: 0;
+		display: block;
+		overflow: hidden;
+}
+
+.gn-icon-menu::before {
+		margin-left: -15px;
+		vertical-align: -2px;
+		width: 30px;
+		height: 3px;
+		background: #5f6f81;
+		box-shadow:0 -6px #5f6f81,0 -12px #5f6f81;
+		content: '';
+}
+.gn-icon-menu.gn-selected::before {
+		background: #5993cd;
+		box-shadow:  0 -6px #5993cd, 0 -12px #5993cd;
+}
+
+/* styles for opening menu */
+
+.gn-menu-wrapper.gn-open-all,
+.gn-menu-wrapper.gn-open-part {
+		-webkit-transform: translateX(0px);
+		-moz-transform: translateX(0px);
+		transform: translateX(0px);
+}
+
+.gn-menu-wrapper.gn-open-all {
+		width: 340px
+}
+
+.gn-menu-wrapper.gn-open-all .gn-submenu li {
+		height: 60px
+}
+
+@media screen and (max-width: 422px) { 
+	.gn-menu-wrapper.gn-open-all {
+			-webkit-transform: translateX(0px);
+			-moz-transform: translateX(0px);
+			transform: translateX(0px);
+			width: 100%;
+	}
+
+	.gn-menu-wrapper.gn-open-all .gn-scroller {
+			width: 130%
+	}
+}
+/***Body****/
+body {margin: 0;
+      padding: 0;
+       font:{text:Font Size} {text:Google Font Body};
+      color: {color:Text};
+      line-height: 1.3;
+      overflow-x:hidden;
+      background:{color:Background} url("{image:Background}") fixed;
+      {block:IfBackgroundCoverImage}
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  {/block:IfBackgroundCoverImage}
+}
+a {color:{color:Link}; text-decoration: none;}
+a:hover {color:{color:Link Hover};}
+h1, h2, h3, h4 {font-family:{text:Google Font Title};}
+h1 {font-size:35px;}
+.content {margin:0 auto;
+margin-top:5%;
+margin-bottom:5%;
+width:50%;
+}
+        ol.notes {
+                padding: 0px;
+                list-style-type: none;
+                border-bottom: dashed 1px #ccc;
+            }
+
+            ol.notes li.note {  display:inline-block;
+                border-top: dashed 1px #ccc;
+                padding: 10px;
+                list-style:none;
+                 width:100%;
+            }
+            ol.notes li.note img.avatar {
+                width: 24px;
+                height: 24px;
+                border-radius:180px;
+                -moz-border-radius:180px;
+                -webkit-border-radius:180px;
+                -html-border-radius:180px;
+            }
+
+            ol.notes li.note span.action {
+                font-weight: bold;
+            }
+
+            ol.notes li.note .answer_content {
+                font-weight: normal;
+            }
+
+            ol.notes li.note blockquote {
+                border-color: #eee;
+                padding: 4px 10px;
+                margin: 10px 0px 0px 25px;
+            }
+
+            ol.notes li.note blockquote a {
+                text-decoration: none;
+            }           
+/***Disqus***/
+.one .content {margin:0 auto;
+    margin-bottom:4%;
+    margin-top:8%;
+    background:white;
+    width:60%;
+}
+.icons li {list-style-type:none;display:inline;}
+.arrow-up {width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	margin:0 auto;
+	border-bottom: 20px solid white;
+}
+blockquote {margin-left:1%;padding-left:1%;
+    border-left: 3px solid {color:Link Hover};
+    background:{color:Blockquote};    
+}
+.post {background:white;
+    width:100%;
+    margin-bottom:4%;
+    border-bottom:3px solid {color:Link Hover};}
+
+.chat ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.chat .even {
+    color:{color:Link Hover};
+    border-bottom:2px dotted {color:Link};
+    
+}
+.chat .odd {border-bottom:2px dotted {color:Link Hover};
+    color: {color:Link};
+}
+.metadata .index {background:white;}
+#disqus_thread {width:90%;
+}  
+.metadata .index {list-style-type:none;}
+.metadata .index li  {display:inline;}
+.text_body {padding:4%; background:white;}
+.photo img, .video object,.video iframe  {display:block;}
+.video object,.video iframe {width:100%;}
+iframe, img, embed, object, video {max-width: 100%; }  
+/***pagination****/
+#pagination {font-weight: bold;
+             font-size:48px;
+}
+#pagination li {display:inline-block;
+                list-style-type:none;
+}
+#pagination li a:hover {padding: 1%;}
+.dsq-comment-message {font-size: 14px;}
+#dsq-pagination {font-size: 12px;  
+                  margin-top: 35px;
+}
+.dsq-comment-meta a, .dsq-comment-actions a {color: #f1446f !important;   
+            opacity: 1 !important;
+            font-size: 12px;
+}
+.dsq-brlink{margin-left: 108px;
+}
+.dsq-comment-count {font-size: 12px; 
+                    text-align: left; 
+                    padding-top:6%; 
+                    clear:both;
+}
+{CustomCSS} 
+</style>
+	<body>
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li class="gn-search-item">
+                    <form action="/search" method="get"  style="background:clear">  
+			<input type="text" name="q" value="{SearchQuery}" placeholder="Search" type="search" class="gn-search">
+			<a class="gn-icon gn-icon-search"><span>Search</span></a>
+							 </form></li>                            
+        <li><a href="/" class="gn-icon gn-icon-article">Articles</a></li>
+        <li><a href="/archive" class="gn-icon gn-icon-archive">{lang:Archive}</a></li>
+         {block:HasPages}
+      {block:Pages}<li><a href={URL} class="gn-icon gn-icon-archive">{Label}</a></li>{/block:Pages}
+     {/block:HasPages}
+         {block:AskEnabled}
+		<li><a href="/ask" class="gn-icon gn-icon-help">Ask</a></li>
+         {/block:AskEnabled}
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a href="/">{Title}</a></li>
+			</ul>
+	<div class="content js-masonry">
+<center><img src="{PortraitURL-96}" align="center" style="-moz-border-radius:180px; -webkit-border-radius:180px; border-radius:180px;"/></center>
+<div class="arrow-up"></div>
+<div class="post text_body">
+<h1><center><a href="/">{Title}</a></center></h1>
+<p>{Description}</p>
+ <ul class="icons">
+        {block:IfYoutubeName}
+          <li><a href="http://www.youtube.com/user/{text:Youtube Name}"><img src="http://static.tumblr.com/r4e6ztn/tXRmju97v/youtube-icon.png" alt="Youtube">
+          </li>
+        {/block:IfYoutubeName}
+       {block:IfDeviantartName}
+          <li><a href="http://www.{text:Deviantart Name}.deviantart.com"><img src="http://static.tumblr.com/r4e6ztn/FQTmju9ri/deviantart-icon.png" alt="deviantart"></a>
+          </li>
+       {/block:IfDeviantartName}
+       {block:IfPinterestName}
+          <li><a href="http://pinterest.com/{text:Pinterest Name}/">
+          <img src="http://static.tumblr.com/r4e6ztn/NAJmjua4r/pinterest-icon.png" alt="pinterest"></a>
+          </li>
+       {/block:IfPinterestName}
+       {block:IfFacebookName}
+          <li><a href="http://www.facebook.com/{text:Facebook Name}"><img src="http://static.tumblr.com/r4e6ztn/vcNmjuaeq/facebok-icon.png" alt="facebook"></a>
+          </li>
+        {/block:IfFacebookName}
+        {block:IfWordpressName}
+          <li><a href="http://www.{text:Wordpress Name}.wordpress.com/">
+          <img src="http://static.tumblr.com/r4e6ztn/VHlmjuani/wordpress-icon.png" alt="wordpress"></a>
+          </li>
+        {/block:IfWordpressName}
+        {block:IfQuoraName}
+        <li><a href="http://www.quora.com/{text:Quora Name}">
+        <img src="http://static.tumblr.com/r4e6ztn/lmSmjudel/quora.png" alt="quora"></a>
+        </li>
+        {/block:IfQuoraName}
+      </ul>
+</div>
+{block:Posts}
+   <article id="{PostID}" class="post {PostType} {TagsAsClasses}">
+<!---------Text-------->
+     {block:Text}
+        <div class="text_body">
+            {block:Title}
+        <h1 class="title"><a href="{Permalink}">{Title}</a></h1>
+         {/block:Title}
+    {Body}
+     </div>
+        {/block:Text}      
+<!---------Photo-------->
+        {block:Photo}
+        <div class="photo inner">
+                  {LinkOpenTag}<center>
+            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" style="width:100%;"/>  
+    </center>{LinkCloseTag}
+<span class="caption full-caption">
+</span>
+{block:Caption} <div class="text_body">{Caption}</div>{/block:Caption}
+       </div>
+        {/block:Photo}
+<!---------Photo Set-------->
+        {block:Photoset}
+        <div class="photoset inner text_body">
+            <center>{Photoset-700}</center>
+{block:Caption}{Caption}{/block:Caption}
+        </div>
+        {/block:Photoset}
+<!---------Quote-------->
+        {block:Quote}
+        <div class="quote inner text_body">
+  <div class="q" style="padding:2%; background:{color:Blockquote};"> <h1 style="   font:40px {text:Google Font Title};color: {color:Link Hover};text-shadow: 3px 3px 0px {color:Blockquote}, 5px 5px 0px {color:Link};letter-spacing: 10px; ">{Quote}"</h1>
+  {block:Source}<cite><p align="right"> -{Source} </p></cite>{/block:Source}</div>
+         </div>
+        {/block:Quote}
+<!---------Link-------->
+        {block:Link}
+        <div class="link inner text_body">
+       <h1 style="padding:2%; background:{color:Background};"><a href="{URL}">{Name}&#8594;</a></h1>
+{block:Description}{Description}{/block:Description}</div>
+        {/block:Link}
+<!---------Chat-------->
+        {block:Chat}
+        <div class="chat inner text_body">
+         {block:Title}
+         <h1><a href="{Permalink}">{Title}</a></h1>
+          {/block:Title}
+        <ul>{block:Lines}
+        <li class="{Alt}">
+        <p>{block:Label}<strong>{Label}</strong>{/block:Label} 
+        {Line} </p></li>{/block:Lines}</ul>
+        </div>
+        {/block:Chat}
+<!---------Audio-------->
+         {block:Audio}
+        <div class="audio inner text_body">
+            {block:TrackName}
+        <h1>
+        <a href="{Permalink}">{TrackName}</a></h1>
+        {/block:TrackName}
+        {block:AudioEmbed} 
+           <center>{AudioEmbed}</center>
+           {/block:AudioEmbed} 
+{block:Caption}{Caption}{/block:Caption}
+          </div>
+        {/block:Audio}
+<!---------Video-------->
+        {block:Video}
+        <div class="video inner">
+            {Video-700}
+{block:Caption}<div class="text_body">{Caption}</div>{/block:Caption}
+         </div>
+        {/block:Video}
+<!---------Question and Answer-------->
+{block:Answer}
+<div class="text_body">
+<img src="{AskerPortraitURL-96}" align="left" style="border-radius:180px; moz-border-radius:180px; -webkit-border-radius:180px;">
+<div class="bubble"><span></span>{Asker}:<h2>{Question}</h2>&nbsp;</div>{Answer}
+</div>
+{/block:Answer}
+<!-----------Date and Metadata--------------->
+        {block:Date}
+<!---------------End Share This---------------->
+        <footer class="metadata">
+        <center>
+            <ul class="index" style="padding:2%;">
+           <li><a class="metacolor" href="{Permalink}"> <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{DayOfMonth} {Month} {Year}</time> </a></li>
+                {block:IfDisqusShortname}
+           <li>
+<a class="metacolor" href="{Permalink}#disqus_thread">Comments</a></li>
+                {/block:IfDisqusShortname}
+                {block:NoteCount}
+                <li><a class="metacolor" href="{Permalink}#notes">{NoteCountWithLabel}</a></li>
+                {/block:NoteCount}
+                {block:ContentSource}
+                <li><a class="metacolor" href="{SourceURL}">{lang:Source}: {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
+                {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}"height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}</a></li> 
+                {/block:ContentSource} 
+            {block:ifShowTags}
+            {block:HasTags}
+    {block:Tags}<li><a class="metacolor" href="{TagURL}">#{Tag}</a> </li>{/block:Tags}
+            {/block:HasTags}
+             {/block:ifShowTags}
+             </center>
+            </ul>
+            </footer>        
+    <!---------------------Disqus Comments-------------------------->
+{block:PermalinkPage}
+<div style="padding:2%; border-bottom:4px solid {color:Link}; background:white;">
+{block:IfDisqusShortname}
+{block:Permalink}
+<div id="disqus_thread" style="padding-bottom: 8em;"></div>
+<script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+<noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+{/block:Permalink}
+{/block:IfDisqusShortname}
+            {block:PostNotes}{PostNotes-64}
+            {/block:PostNotes} 
+            </div>
+            {/block:PermalinkPage} 
+        {/block:Date}
+     </article>
+    {/block:Posts}
+<!-----------------Navigation-------------->
+       {block:Pagination}
+<nav id="pagination" class="post text_body">
+<center>
+      {block:PreviousPage}
+            <li><a href="{PreviousPage}">  &#8592;{lang:Previous}</a></li>
+      {/block:PreviousPage}
+
+{block:JumpPagination length="6"}
+            {block:CurrentPage}
+                 <li><span class="current_page" style="text-decoration:underline;">{PageNumber}</span></li>
+            {/block:CurrentPage}
+
+{block:JumpPage}
+                  <a class="jump_page" href="{URL}">{PageNumber}</a>
+            {/block:JumpPage}
+      {/block:JumpPagination}
+
+{block:NextPage}
+          <li> <a id="next-page" href="{NextPage}">{lang:Next}&#8594;</a></li>
+      {/block:NextPage}
+</center>
+</nav>
+{/block:Pagination}
+
+    {block:DayPagination}
+           <nav id="pagination" style="margin-bottom:8em;font:16px;">
+            <center>
+        <ul>   
+              {block:PreviousDayPage}
+                 <li><a href="{PreviousDayPage}">
+                        &#171; {ShortMonth} {DayOfMonth}
+                    </a></li>
+                {/block:PreviousDayPage}
+
+                {block:NextDayPage}
+                  <li><a href="{NextDayPage}">
+                        {ShortMonth} {DayOfMonth} &#187;
+                    </a></li>
+                {/block:NextDayPage}
+            </ul>
+             </center>
+        </nav>
+            {/block:DayPagination}
+</div>          
+		</div><!-- /container -->
+    	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+		<style>
+			/* desert scheme ported from vim to google prettify */
+			pre.prettyprint {
+				border: 0 !important;
+				padding: 20px;
+				display: block;
+				background-color: #333;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+				margin: 20px 0px;
+				-moz-tab-size: 4;
+				-o-tab-size: 4;
+				-webkit-tab-size: 4;
+				-ms-tab-size: 4;
+				tab-size: 4;
+			}
+			
+			pre .nocode { background-color: none; color: #000 }
+			pre .str { color: #ffa0a0 } /* string  - pink */
+			pre .kwd { color: #f0e68c; font-weight: bold }
+			pre .com { color: #87ceeb } /* comment - skyblue */
+			pre .typ { color: #98fb98 } /* type    - lightgreen */
+			pre .lit { color: #cd5c5c } /* literal - darkred */
+			pre .pun { color: #fff }    /* punctuation */
+			pre .pln { color: #fff }    /* plaintext */
+			pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+			pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+			pre .atv { color: #ffa0a0 } /* attribute value - pink */
+			pre .dec { color: #98fb98 } /* decimal         - lightgreen */
+			
+			/* Specify class=linenums on a pre to get line numbering */
+			ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+			li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+			/* Alternate shading for lines */
+			li.L1,li.L3,li.L5,li.L7,li.L9 { }
+			
+			@media print {
+				pre.prettyprint { background-color: none; border: 0 !important; }
+				pre .str, code .str { color: #060 }
+				pre .kwd, code .kwd { color: #006; font-weight: bold }
+				pre .com, code .com { color: #600; font-style: italic }
+				pre .typ, code .typ { color: #404; font-weight: bold }
+				pre .lit, code .lit { color: #044 }
+				pre .pun, code .pun { color: #440 }
+				pre .pln, code .pln { color: #000 }
+				pre .tag, code .tag { color: #006; font-weight: bold }
+				pre .atn, code .atn { color: #404 }
+				pre .atv, code .atv { color: #060 }
+			}
+		</style>
+<!--------Google Analytics---------->
+{block:IfGoogleAnalyticsID}
+  <script type="text/javascript">var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try{var pageTracker=_gat._getTracker("{text:Google Analytics ID}");pageTracker._trackPageview()}catch(err){}</script>
+{block:IfGoogleAnalyticsID}
+<!----------------Disqus--------->
+  {block:IfDisqusShortname}
+    <script type="text/javascript">
+    //<![CDATA[
+    (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+        }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+    })();
+    //]]>
+    </script>
+  {/block:IfDisqusShortname}
+	<script src="http://static.tumblr.com/r4e6ztn/g1amrnicf/classie.js"></script>
+<script src="http://static.tumblr.com/r4e6ztn/qWgmrnif4/gnmenu.js"></script>
+<script>
+            new gnMenu( document.getElementById( 'gn-menu' ) );
+    	</script>
+	</body>
+</html>
