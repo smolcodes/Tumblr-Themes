@@ -120,6 +120,7 @@ Questions? Ask @ www.dubiousradical.me
 <meta name="text:Banner Padding" content="6% 1% 2% 1%"/>
 <meta name="text:Footer Padding" content="1% 5% 1% 5%"/>
 <meta name="text:Tagline" content="Here Be a Tagline!"/>
+<meta name="text:Tumblr Name" content=""/>
 <!-------------Social Media--------------------->
 <meta name="text:Username on Facebook" content="" />
 <meta name="text:Username on Flickr" content="" />
@@ -520,13 +521,9 @@ input.gn-search:focus {
                 vertical-align: -2px;
                 width: 30px;
                 height: 3px;
-                background: #5f6f81;
-                box-shadow:0 -6px #5f6f81,0 -12px #5f6f81;
+                background: #c6d0da;
+                box-shadow:0 -6px #c6d0da,0 -12px #c6d0da;
                 content: '';
-}
-.gn-icon-menu.gn-selected::before {
-                background: #5993cd;
-                box-shadow:  0 -6px #5993cd, 0 -12px #5993cd;
 }
 
 /* styles for opening menu */
@@ -618,7 +615,6 @@ input.gn-search:focus {
 #followed ul {
     display: inline-block;
     list-style: none;
-    margin: 0 0 4% 0;
     padding: 0;
     width: 100%;
 }
@@ -643,7 +639,9 @@ input[type="search"] {
 }
 .sec2box {
      padding:2% 5% 2% 5%;
+     border-top:1px solid  {color:Main};
 }
+.name {border-top:none;}
 #followed img {
     display: block;
     float: left;
@@ -676,7 +674,7 @@ input[type="search"] {
 .content {{block:IfShowSideBar}
           float:left;
           display:block;
-          border-left:2px solid {color:Main};
+          border-left:1px solid {color:Main};
           {/block:IfShowSideBar}
            {block:IfNotShowSideBar}
            margin:0 auto;
@@ -829,6 +827,17 @@ ol.notes li.note blockquote a {text-decoration: none;}
                     padding-top:6%; 
                     clear:both;
 }
+/* Tumblr Google Feed API */
+/* Individual Post */
+.gfc-result {border-bottom: 1px solid #c0c0c0;
+             width:100%;}
+/* Removes a border at the top of the very first post */
+.gfc-resultsHeader {border: none !important;}
+a.gf-title { font-size:.875em;}
+/* Post date */
+.gf-relativePublishedDate {font-size: .625em;}
+/* Post snippet */
+.gf-snippet {font-size:.875em;}
 {CustomCSS} 
 </style>
 </head>
@@ -897,6 +906,15 @@ ol.notes li.note blockquote a {text-decoration: none;}
     		<div class="name sec2box">
 			<p>{Description}</p>
 	       </div>
+	    <!---------Recent-------->
+    {block:IfTumblrName}
+    <div class="sec2box">
+        <h2 class="itemtitle">Recent Posts</h2>
+    <div id="recentPosts">
+        <p>Loading...</p>
+    </div>
+    </div>
+    {/block:IfTumblrName}
        <!---------Likes-------->
     {block:IfLikesInSidebar}
     {block:Likes}
@@ -1255,5 +1273,21 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 <script>
             new gnMenu( document.getElementById( 'gn-menu' ) );
             </script>
+<!-------Recent Posts----->
+<script type="text/javascript" src="https://www.google.com/jsapi "></script>
+<script>
+google.load("feeds", "1");
+function OnLoad() {
+// Create a feed control
+var feedControl = new google.feeds.FeedControl(); //Create a feed control
+// Add a RSS or XML feed.    
+feedControl.addFeed("http://{text:Tumblr Name}.tumblr.com/rss ");
+// Set number of posts to display
+feedControl.setNumEntries(3);
+// Now display it in an element with an id of "recentPosts"
+feedControl.draw(document.getElementById("recentPosts"));
+}
+google.setOnLoadCallback(OnLoad);
+</script>
   </body>
 </html>
