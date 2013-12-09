@@ -67,6 +67,9 @@
   <link rel="shortcut icon" href="{Favicon}" />
   <link rel="apple-touch-icon" href="{PortraitURL-128}" />
   <link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+    <!--[if IE]>
+<link href="http://static.tumblr.com/r4e6ztn/6anmxk6o1/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
 <!--------------------------------------------
 '||'''|. '||'''|, 
  ||   ||  ||   || 
@@ -411,6 +414,79 @@ header .overlay {background-color: {color:Banner Overlay};}
 .highlightred {background: rgba(223,96,96,.3);}
 .highlightblue {background: rgba(126,219,226,.3);}
 .highlightyellow {background: rgba(242,218,62,.3);}
+/*****TOOLTIP*****/
+/*****ANIMATIONS*****/
+
+.tooltip {
+	transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+}
+.tooltip span {
+	pointer-events: none;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	bottom: 0;
+	transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+}
+.tooltip:hover span {
+	pointer-events: auto;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	bottom: 30px;
+}
+
+/*****END ANIMATIONS*****/
+
+.tooltip {
+	font-weight: 700;
+	color: #3b3b3b;
+	text-decoration: none;
+	
+	position: relative;
+	display: inline-block;
+}
+.tooltip span {
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 400;
+	color: #fff;
+	min-width: 150px;
+	max-width: 300px;
+	padding: 12px 20px;
+	left: -30%;
+	margin-left: -35px;
+	display: block;
+	position: absolute;
+	z-index: 30;
+}
+
+.tooltip:hover span {display: block;}
+.tooltip span:before, .tooltip span:after /* Triangle */ {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #ea4816;
+	z-index: 29;
+}
+
+.tooltip span img {
+	max-width: 300px; /* Maximum width of image to display. probably don't want any larger or else it will be too distracting. */
+	padding: 6px 0;
+	clear: right;
+}
+.tooltip:hover {color:{color:Tooltip};}
+.tooltip span {
+	background:{color:Tooltip};
+}
 /***end Post Decor***/
 iframe, img, embed, object, video {max-width: 100%; }  
 blockquote {
