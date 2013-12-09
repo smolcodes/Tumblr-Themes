@@ -142,6 +142,48 @@ Questions? Ask @ www.dubiousradical.me
 <link rel="stylesheet" href="http://static.tumblr.com/wgijwsy/6lWma2908/normalize.min.css" type="text/css"/>
 <!--------------Font Awesome------------------>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script src="http://static.tumblr.com/smotcsf/nBdmx9k3g/run_prettify.js"></script>
+<style type="text/css">
+/* Pretty printing styles. Used with prettify.js. */
+/* desert scheme ported from vim to google prettify */
+/* desert scheme ported from vim to google prettify */
+pre { display: block; background-color: #333;}
+pre .nocode { background-color: none; color: #d8d9d9 }
+pre .str { color: #ffa0a0 } /* string  - pink */
+pre .kwd { color: #f0e68c; font-weight: bold }
+pre .com { color: #87ceeb } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type    - lightgreen */
+pre .lit { color: #cd5c5c } /* literal - darkred */
+pre .pun { color: #fff }    /* punctuation */
+pre .pln { color: #fff }    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal         - lightgreen */
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+@media print {
+  pre { background-color: none }
+  pre .str, code .str { color: #060 }
+  pre .kwd, code .kwd { color: #006; font-weight: bold }
+  pre .com, code .com { color: #600; font-style: italic }
+  pre .typ, code .typ { color: #404; font-weight: bold }
+  pre .lit, code .lit { color: #044 }
+  pre .pun, code .pun { color: #440 }
+  pre .pln, code .pln { color: #000 }
+  pre .tag, code .tag { color: #006; font-weight: bold }
+  pre .atn, code .atn { color: #404 }
+  pre .atv, code .atv { color: #060 }
+}
+.content pre code {background-color:inherit; color:inherit}
+.content pre      { padding:1em; margin: 0.5em 0px; }
+</style>
+</head>
 <style type="text/css">
 /***Body****/
 html,body{
@@ -155,7 +197,8 @@ html,body{
       background:{color:Background};
 }
 /***General***/
- a.install {-webkit-font-smoothing: antialiased;
+ a.install {
+       -webkit-font-smoothing: antialiased;
         display: block;
         font: 600 12px/18px "Helvetica Neue","HelveticaNeue",Helvetica        ,Arial,sans-serif;
         color: #FFF;
@@ -176,7 +219,8 @@ html,body{
 }
 a.install:hover {background-color: rgba(0,0,0,.28);}
 a:hover {color:{color:Link Hover};}
-a {text-decoration: none;
+a {
+   text-decoration: none;
    color: {color:Link};
    border:none;
    transition:color 0.3s ease;
@@ -242,7 +286,8 @@ header .overlay {background-color: {color:Banner Overlay};}
 .overlay.o-90{-ms-filter:"alpha(opacity=90)";filter:alpha(opacity=90);-moz-opacity:.9;-khtml-opacity:.9;opacity:.9}
 {/block:IfBannerImage}
 /***Footer****/
-.section4 {background: {color:Footer} url("{image:Footer}");
+.section4 {
+   background: {color:Footer} url("{image:Footer}");
     {block:IfFooterCoverImage}
       -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -274,7 +319,7 @@ header .overlay {background-color: {color:Banner Overlay};}
 	cursor: pointer;
 	float:left;
 	position:fixed;
-	z-index:200;
+	z-index:2000;
 }
 .cbp-spmenu-vertical {
 	width: 240px;
@@ -295,25 +340,16 @@ header .overlay {background-color: {color:Banner Overlay};}
        }
 /* Vertical menu that slides from the left or right */
 
-.cbp-spmenu-left {
-	left: -240px;
-}
-.cbp-spmenu-left.cbp-spmenu-open {
-	left: 0px;
-}
-
-.cbp-spmenu-right.cbp-spmenu-open {
-	right: 0px;
-}
+.cbp-spmenu-left {left: -240px;}
+.cbp-spmenu-left.cbp-spmenu-open {left: 0px;}
+.cbp-spmenu-right.cbp-spmenu-open {right: 0px;}
 .cbp-spmenu-push {
 	overflow-x: hidden;
 	position: relative;
 	left: 0;
 }
 
-.cbp-spmenu-push-toright {
-	left: 240px;
-}
+.cbp-spmenu-push-toright {left: 240px;}
 /* Transitions */
 .cbp-spmenu,
 .cbp-spmenu-push {
@@ -335,10 +371,12 @@ header .overlay {background-color: {color:Banner Overlay};}
 /***Content (post+sidebar)***/
 .smedia {padding:0px; margin:0px; padding-bottom:2%;}
 .smedia li {display:inline; list-style:none; margin:0px; padding:0px;}
-.smedia li a {margin:0px;
+.smedia li a {
+              margin:0px;
               padding:1%;
               color:{color:Main};}
-.smedia li a:hover {background:{color:Link Hover};
+.smedia li a:hover {
+                    background:{color:Link Hover};
                     border-radius:180px;
                     -moz-border-radius:180px;
                     -webkit-border-radius:180px;
@@ -365,8 +403,15 @@ header .overlay {background-color: {color:Banner Overlay};}
 }
 .stuff p a {border-bottom:1px solid rgba(0,0,0,.1); padding-bottom:.5%;}
 .stuff p a:hover {border-bottom:1px solid {color:Link Hover};}
-#left {float:left; margin:2%;max-width:30%;}
-#right {float:right; margin:2%;max-width:30%;}
+/***Post Decour***/
+#left {float:left; padding-right:2%; padding-bottom:2%; margin:0; max-width:40%;}
+#right {float:right;padding-left:2%; padding-bottom:2%; margin:0; max-width:40%;}
+#left {float:left; padding-right:2%; padding-bottom:2%; margin:0; max-width:40%;}
+#center {margin:0 auto;}
+.highlightred {background: rgba(223,96,96,.3);}
+.highlightblue {background: rgba(126,219,226,.3);}
+.highlightyellow {background: rgba(242,218,62,.3);}
+/***end Post Decor***/
 iframe, img, embed, object, video {max-width: 100%; }  
 blockquote {
     padding-left: 2%;
@@ -375,62 +420,71 @@ blockquote {
 }
 .chatlines {padding:0; margin:0;
                width:100%;}
-.chatlines li {list-style:none;
-padding:2%; margin:none;
-          border-bottom:{color:Main};}
+.chatlines li {
+          list-style:none;
+          padding:2%; 
+          margin:none;
+          border-bottom:{color:Main};
+          }
 .chatlines .even .label {color: {color:Link}; font-weight:bold;}
-.chatlines .even {background:rgba(0,0,0,.1);
+.chatlines .even {
+             background:rgba(0,0,0,.1);
              border-top:1px solid rgba(0,0,0,.2);
              border-bottom:1px solid rgba(0,0,0,.2);}
 .chatlines .odd .label {color: {color:Link Hover}; font-weight:bold;}
 .label {padding-right:2%;}
-.musiccontent {float:left;
+.musiccontent {
+              float:left;
               padding-bottom:3%;
               width:100%;
               position:relative;
-     }
-.music {float:right;
+              }
+.music {
+        float:right;
         width:50%;
         display:block;
-}
+       }
 .music_menu { 
          margin:none;
          list-style:none;
           padding:2%;
-}
+           }
 .music_menu li {
            list-style:none;
            margin: 0px;
             text-decoration:none;
             padding:2%;
             border-bottom:1px solid rgba(0,0,0,.3);
-}
-.info {float:left;
+           }
+.info {
+       float:left;
        width:50%;
        display:block;
-}
+       }
 .video .wide iframe {width:975px;}
 .photoset img {width:875px;}
 .g {
    padding:2%;
    margin:0 auto;
    margin-bottom:3%;
-}
+   }
 .g { border:3px solid {color:Main};}
 body .spotify_audio_player{height:80px!important; width:55%;}
 body .spotify_audio_player .player{
     -moz-border-radius:0!important;-webkit-border-radius:0!important;border-radius:0!important;
 }
 body .soundcloud_audio_player {
-    -moz-border-radius:0!important;-webkit-border-radius:0!important;border-radius:0!important;
+    -moz-border-radius:0!important;
+    -webkit-border-radius:0!important;
+    border-radius:0!important;
     width:975px;
-}
+                              }
 /***Notes/Tags***/
 ol.notes {
                padding: 0px;
                 list-style-type: none;
                 border-bottom: solid 1px #ccc;
-}
+         }
 ol.notes li.note {
                 border-top: solid 1px #ccc;
                 padding: 10px;
@@ -443,21 +497,22 @@ ol.notes li.note img.avatar {
                 -moz-border-radius:180px;
                 -webkit-border-radius:180px;
                 -html-border-radius:180px;
-}
+                            }
 ol.notes li.note span.action {font-weight: bold;}
 ol.notes li.note .answer_content {font-weight: normal;}
 ol.notes li.note blockquote {
                 border-color: #eee;
                 padding: 4px 10px;
                 margin: 10px 0px 0px 10px;
-}
+                             }
 ol.notes li.note blockquote a {text-decoration: none;}
 .like_and_reblog_buttons li {display:inline-block; float:left;}
 footer.metadata { 
     margin:none;
        border-top:1px solid {color:Main};
-}
-footer {width:50%; margin:0 auto;}
+       width:50%;
+       margin:0 auto;
+                 }
 .metadata .index{ 
          padding: 4px;
          margin:none;
@@ -466,13 +521,19 @@ footer {width:50%; margin:0 auto;}
 .metadata a:hover {color:{color:Link Hover};}
 .index li {
            list-style:none;
-           display:inline-block;
+           display:inline;
+           margin:0;
             text-decoration:none;
             padding-right:5px;
 }
 /***Pagination***/
 .pagination {margin-bottom:10%;margin-top:8%;}
-.pagination li {display:inline-block; list-style:none; padding:0px; margin:0px:}
+.pagination li {
+                display:inline-block; 
+                list-style:none; 
+                padding:0px; 
+                margin:0px:
+                }
 .pagination li a{
     margin-right:30%;
     padding:25px 45px;
@@ -482,7 +543,7 @@ footer {width:50%; margin:0 auto;}
      -webkit-transition:background-color 0.2s ease;
      -moz-transition:background-color 0.2s ease;
      -html-transition:background-color 0.2s ease;
-}
+                 }
 .pagination li a:hover {color:{color:Main}; background:{color:Link Hover};}
 @media only screen and (max-width:1060px){
     .stuff, footer.metadata {width:100%;}
@@ -491,7 +552,6 @@ footer {width:50%; margin:0 auto;}
 }
 {CustomCSS} 
 </style>
-</head>
 	<body class="cbp-spmenu-push">
 <a href="http://www.tumblr.com/theme/38096" target="_blank" class="install">Install Theme</a>
 <div class="menuicon"><div class="button" id="showLeftPush"><h1><a href="#">&#9776;</a></h1></div></div>
@@ -654,7 +714,7 @@ footer {width:50%; margin:0 auto;}
          {block:Photoset}
 	     <center><div class="pset">{Photoset-700}</div></center>
    <div class="stuff">{Caption}</div>
-           {/block:Photoset}
+         {/block:Photoset}
 <!---------Quote-------->
         {block:Quote}
         <div class="stuff g">
@@ -720,27 +780,29 @@ footer {width:50%; margin:0 auto;}
     <footer class="metadata">
              {block:IndexPage}
          <ul class="index">
-            <li><a class="metacolor" href="{Permalink}">{TimeAgo}</a></li>
+            <li><a href="{Permalink}">{TimeAgo}</a></li>
                 {block:ContentSource}
-                <li><a class="metacolor" href="{SourceURL}">{lang:Source}: {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
-                {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}"height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}</a></li> 
+                <li><a href="{SourceURL}">{lang:Source}: {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
+                {block:SourceLogo}
+            <img src="{BlackLogoURL}" width="{LogoWidth}"height="{LogoHeight}" alt="{SourceTitle}" />
+                {/block:SourceLogo}</a></li> 
                 {/block:ContentSource} 
-             <li class="interact" style="float:right">
+              <li class="interact" style="float:right;">
          <ul class="like_and_reblog_buttons">
               <li>{ReblogButton size="22" }</li>
               <li>&nbsp;</li>
               <li>{LikeButton size="22" }</li>
           </ul>
               </li>
-            </ul>
+        </ul>
             {/block:IndexPage}
              {block:PermalinkPage}
                <ul class="index">
                  {block:NoteCount}
-               <li> <i class="icon-link"></i> <a class="metacolor" href="{Permalink}#notes">{NoteCountWithLabel}</a></li>
+               <li> <i class="icon-link"></i> <a href="{Permalink}#notes">{NoteCountWithLabel}</a></li>
                 {/block:NoteCount}
               {block:HasTags}
-    {block:Tags}<li><a class="metacolor" href="{TagURL}">#{Tag}</a></li>{/block:Tags}
+    {block:Tags}<li><a href="{TagURL}">#{Tag}</a></li>{/block:Tags}
             {/block:HasTags}
               </ul>
             {/block:PermalinkPage}
@@ -824,66 +886,6 @@ function iResize() {
 <script src="http://static.tumblr.com/r4e6ztn/encmu8gen/new__4.js">
 </script>
 {/block:IfInfiniteScroll}
-<script type="text/javascript" language="javascript" src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
-<script type="text/javascript">
-function addLoadEvent(func) {
-  var oldonload = window.onload;
-  if (typeof window.onload != 'function') {
-    window.onload = func;
-  } else {
-    window.onload = function() {
-      if (oldonload) {
-        oldonload();
-      }
-      func();
-    }
-  }
-}
-addLoadEvent(function() {
-    prettyPrint();
-});
-</script>
-<style type="text/css">
-/* Pretty printing styles. Used with prettify.js. */
-/* desert scheme ported from vim to google prettify */
-/* desert scheme ported from vim to google prettify */
-pre { display: block; background-color: #333;}
-pre .nocode { background-color: none; color: #d8d9d9 }
-pre .str { color: #ffa0a0 } /* string  - pink */
-pre .kwd { color: #f0e68c; font-weight: bold }
-pre .com { color: #87ceeb } /* comment - skyblue */
-pre .typ { color: #98fb98 } /* type    - lightgreen */
-pre .lit { color: #cd5c5c } /* literal - darkred */
-pre .pun { color: #fff }    /* punctuation */
-pre .pln { color: #fff }    /* plaintext */
-pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
-pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
-pre .atv { color: #ffa0a0 } /* attribute value - pink */
-pre .dec { color: #98fb98 } /* decimal         - lightgreen */
-
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
-li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
-/* Alternate shading for lines */
-li.L1,li.L3,li.L5,li.L7,li.L9 { }
-
-@media print {
-  pre { background-color: none }
-  pre .str, code .str { color: #060 }
-  pre .kwd, code .kwd { color: #006; font-weight: bold }
-  pre .com, code .com { color: #600; font-style: italic }
-  pre .typ, code .typ { color: #404; font-weight: bold }
-  pre .lit, code .lit { color: #044 }
-  pre .pun, code .pun { color: #440 }
-  pre .pln, code .pln { color: #000 }
-  pre .tag, code .tag { color: #006; font-weight: bold }
-  pre .atn, code .atn { color: #404 }
-  pre .atv, code .atv { color: #060 }
-}
-.content pre code {background-color:inherit; color:inherit}
-.content pre      { padding:1em; margin: 0.5em 0px; }
-</style>
 <!--------Google Analytics---------->
 {block:IfGoogleAnalyticsID}
   <script type="text/javascript">var gaJsHost=(("https:"==document.location.protocol)?"https://ssl.":"http://www.");document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try{var pageTracker=_gat._getTracker("{text:Google Analytics ID}");pageTracker._trackPageview()}catch(err){}</script>
@@ -905,9 +907,5 @@ li.L1,li.L3,li.L5,li.L7,li.L9 { }
 				}
 			}
 		</script>
-<script src="http://static.tumblr.com/r4e6ztn/qWgmrnif4/gnmenu.js"></script>
-<script>
-            new gnMenu( document.getElementById( 'gn-menu' ) );
-            </script>
   </body>
 </html>
