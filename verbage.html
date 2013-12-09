@@ -99,6 +99,7 @@ Questions? Ask @ www.dubiousradical.me
 <meta name="color:Menu" content="#1e2123"/>
 <meta name="color:Link" content="#52c097"/>
 <meta name="color:Link Hover" content="#ed6060"/>
+<meta name="color:Tooltip" content="#ea4816"/>
 <meta name="color:Footer" content="#242e32"/>
 <!-------------Select--------------------->
 <meta name="select:Banner Overlay Opacity" content="o-90" title="90%">
@@ -409,7 +410,6 @@ header .overlay {background-color: {color:Banner Overlay};}
 /***Post Decour***/
 #left {float:left; padding-right:2%; padding-bottom:2%; margin:0; max-width:40%;}
 #right {float:right;padding-left:2%; padding-bottom:2%; margin:0; max-width:40%;}
-#left {float:left; padding-right:2%; padding-bottom:2%; margin:0; max-width:40%;}
 #center {margin:0 auto;}
 .highlightred {background: rgba(223,96,96,.3);}
 .highlightblue {background: rgba(126,219,226,.3);}
@@ -422,7 +422,9 @@ header .overlay {background-color: {color:Banner Overlay};}
 	-moz-transition: all 0.25s ease-in-out;
 	-webkit-transition: all 0.25s ease-in-out;
 }
+.tooltip:hover {color:{color:Tooltip};}
 .tooltip span {
+	background:{color:Tooltip};
 	pointer-events: none;
 	opacity: 0;
 	filter: alpha(opacity=0);
