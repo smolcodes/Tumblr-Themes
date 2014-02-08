@@ -78,7 +78,7 @@
 .||...|' .||  \\. dubious radical
 Title:Verbage
 Author:Dubious Radical
-Version:1.0.3
+Version:1.1.0
 Icons from Picons:http://picons.me/
 Questions? Ask @ www.dubiousradical.me
 -Learn German! Schon means Pretty
@@ -90,7 +90,6 @@ Questions? Ask @ www.dubiousradical.me
 <meta name="if:Footer Cover Image" content="1"/>
 <meta name="if:Show Icon" content="1"/>
 <meta name="if:Infinite Scroll" content="0"/>
-<meta name="if:Sassy Responses" content="0"/>
 <meta name="color:Background" content="#ffffff"/>
 <meta name="color:Body Text" content="#605c5c"/>
 <meta name="color:Banner Text" content="#f5fbfa"/>
@@ -146,8 +145,12 @@ Questions? Ask @ www.dubiousradical.me
 <!--------------CSS--------------->
 <link rel="stylesheet" href="http://static.tumblr.com/wgijwsy/6lWma2908/normalize.min.css" type="text/css"/>
 <!--------------Font Awesome------------------>
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <script src="http://static.tumblr.com/smotcsf/nBdmx9k3g/run_prettify.js"></script>
+<!-------------Math Jax----------------------->
+<script type="text/javascript"
+  src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 <style type="text/css">
 /* Pretty printing styles. Used with prettify.js. */
 /* desert scheme ported from vim to google prettify */
@@ -261,7 +264,7 @@ header {
              }
 .title a {
     font-size:{text:Title Font Size};
-    letter-spacing:8px;
+    letter-spacing:4px;
     padding:1%;
     font-family:{text:Google Font Title};
     color: {color:Banner Text};
@@ -386,24 +389,22 @@ header .overlay {background-color: {color:Banner Overlay};}
                     }
 /***Posts***/
 .title2 a {
-    font-size:38px;
-    letter-spacing:4px;
-     line-height:1.5em;
+    font-size:35px;
          }
 .title2 { width:80%;}
 .post {
        position:relative;
       width:100%; 
-      padding-top:2%;
-      padding-bottom:4%;
+      padding-top:4%;
+      padding-bottom:2%;
       }
 .stuff {
     margin:0 auto;
      width:55%; 
-     padding:1% 3% 3% 3%;
+     padding-bottom:3%;
       }
-.stuff p a {border-bottom:1px solid rgba(0,0,0,.1); padding-bottom:.5%;}
-.stuff p a:hover {border-bottom:1px solid {color:Link Hover};}
+.stuff p a {color:{color:Link}; border-bottom:1px solid rgba(0,0,0,.1); padding-bottom:1px;}
+.stuff p a:hover {color:{color:Link Hover}; border-bottom:1px solid {color:Link Hover};}
 /***Post Decour***/
 #left {float:left; padding-right:2%; padding-bottom:2%; margin:0; max-width:40%;}
 #right {float:right;padding-left:2%; padding-bottom:2%; margin:0; max-width:40%;}
@@ -583,7 +584,7 @@ ol.notes li.note blockquote a {text-decoration: none;}
 footer.metadata { 
     margin:none;
        border-top:1px solid {color:Main};
-       width:50%;
+       width:55%;
        margin:0 auto;
                  }
 .metadata .index{ 
@@ -600,24 +601,40 @@ footer.metadata {
             padding-right:5px;
           }
 /***Pagination***/
-.pagination {margin-bottom:10%;margin-top:8%;}
+.pagination {margin:0 auto;
+    margin-bottom:10%;margin-top:8%;}
 .pagination li {
-                display:inline-block; 
+                display:inline; 
                 list-style:none; 
                 padding:0px; 
                 margin:0px:
                 }
 .pagination li a{
-    margin-right:30%;
+    margin-right:5%;
     padding:25px 45px;
     background:{color:Link}; 
     color:{color:Main};
-     transition:background-color 0.2s ease;
-     -webkit-transition:background-color 0.2s ease;
-     -moz-transition:background-color 0.2s ease;
-     -html-transition:background-color 0.2s ease;
+      transition:background-color 0.3s ease;
+     -webkit-transition:background-color 0.3s ease;
+     -moz-transition:background-color 0.3s ease;
+     -html-transition:background-color 0.3s ease;
                  }
 .pagination li a:hover {color:{color:Main}; background:{color:Link Hover};}
+.more {margin:0 auto;
+    margin-bottom:2%;margin-top:8%;}
+.more a{
+    margin:0 auto;
+    padding:15px 35px;
+    border:2px solid {color:Main}; 
+    color:{color:Main};
+      background:{color:Background}; 
+     transition:background-color 0.5s ease;
+     -webkit-transition:background-color 0.5s ease;
+     -moz-transition:background-color 0.5s ease;
+     -html-transition:background-color 0.5s ease;
+                 }
+.more a:hover {color:{color:Main}; background:{color:Link Hover};
+               border:none;}
 @media only screen and (max-width:1060px){
     .stuff, footer.metadata {width:100%;}
     #container {width:90%;
@@ -644,7 +661,7 @@ footer.metadata {
 </style>
 	<body class="cbp-spmenu-push">
 <a href="http://www.tumblr.com/theme/38096" target="_blank" class="install">Install Theme</a>
-<div class="menuicon"><div class="button" id="showLeftPush"><h1><a href="#">&#9776;</a></h1></div></div>
+<div class="menuicon"><div class="button" id="showLeftPush"><h1><a href="#"><i class="fa fa-bars"></i></a></h1></div></div>
       <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
             <a href="/">{Title}</a>  
         <a href="/archive">{lang:Archive}</a>
@@ -672,7 +689,7 @@ footer.metadata {
 <a href="/">{Title}</a>
              </h1>
            {/block:IfNotLogoImage}
-             <img src="{image:Logo}">
+             <a href="/"><img src="{image:Logo}"></a>
              <div class="description" style="width:55%;">
              {block:IfShowIcon}
              <img src="{PortraitURL-96}" style="border-radius:180px;-moz-border-radius:180px;-webkit-border-radius:180px;-html-border-radius:180px;">
@@ -764,14 +781,14 @@ footer.metadata {
 <div class="content">
 <center>                       
            {block:SearchResults}
-    		<h1 class="results">{block:ifSassyResponses}Lucky you!{/block:ifSassyResponses} {lang:SearchResultCount results for SearchQuery 2}</h1>
+    		<h1 class="results"> {lang:SearchResultCount results for SearchQuery 2}</h1>
 			{/block:SearchResults}		
 			{block:NoSearchResults}
-			<h1 class="results">{block:ifSassyResponses}EEKK we don't carry THAT here{/block:ifSassyResponses} {lang:No search results for SearchQuery 2}</h1>
+			<h1 class="results"> {lang:No search results for SearchQuery 2}</h1>
 			{/block:NoSearchResults}
 		{/block:SearchPage}	
 		{block:TagPage}
-			<h1 class="results">{block:ifSassyResponses}Only perverts look for{/block:ifSassyResponses} #{Tag}</h1>
+			<h1 class="results"> #{Tag}</h1>
 		{/block:TagPage}</center>
 {block:Posts}
    <article id="{PostID}"  class="{PostType} post">
@@ -780,8 +797,8 @@ footer.metadata {
        <h2 class="title2"><a href="{Permalink}">{Title}</a></h2>
          {/block:Title}
         {block:Link}
-          <h2 class="title2" style="background:{color:main}; padding:2%;">
-       <a href="{URL}">{Name} &#8594;</a></h2>
+          <h2 class="title2 stuff g">
+       <a>{Name} &#8594;</a></h2>
         {/block:Link}
          </center>
 <!---------Text-------->
@@ -791,6 +808,11 @@ footer.metadata {
          <center><h3><a class="metacolor" style="color:{color:Main}" href="{Permalink}"><time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">-{DayOfMonth} &#9674; {ShortMonth} &#9674; {Year}-</time></a></h3></center> 
          {/block:Date}
      {Body}
+      {block:More} 
+						<div class="more">
+						<center><a href="{Permalink}">{lang:Read more}</a></center>
+						</div>
+                        {/block:More} 
      </div>
         {/block:Text}      
 <!---------Photo-------->
@@ -856,13 +878,13 @@ footer.metadata {
 <!---------Question and Answer-------->
         {block:Answer}
         <div class="stuff">
-        <div class="g">
           <center>
-        <h3><div class="question">{Question}</div></h3>
+          <div class="question g">
+        <h3>{Question}</h3>
            <p>{Asker}</p>
+           </div>
                </center>
           <div class="answer"><p>{Answer}</p></div>
-           </div>
           </div>
         {/block:Answer}
 <!-----------Date and Metadata--------------->
@@ -921,15 +943,15 @@ footer.metadata {
 </div>
 </div>
  <!------------------------Pagination--------------------------->
-<div class="ft" style="width:100%; margin:0 auto; float:left; display:block;">
+<div class="ft" style="margin:0 auto;">
        <center>
              <ul class="pagination">
   {block:Pagination}
        {block:PreviousPage}
-    <li><a id="prev-page" href="{PreviousPage}">{lang:Previous}</a></li>
+    <li><a id="prev-page" href="{PreviousPage}">&#8592; {lang:Previous}</a></li>
       {/block:PreviousPage}
       {block:NextPage}
-          <li> <a id="next-page" href="{NextPage}">{lang:Next}</a></li>
+          <li> <a id="next-page" href="{NextPage}">{lang:Next} &#8594;</a></li>
       {/block:NextPage}
       {/block:Pagination}
            {block:PermalinkPagination}
@@ -991,7 +1013,6 @@ function iResize() {
  {block:IndexPage}
 {block:IfInfiniteScroll}
 <script src="http://static.tumblr.com/wgijwsy/u2vm2hxv6/jquery.infinitescroll.min.js"></script>
-<script src="http://static.tumblr.com/r4e6ztn/encmu8gen/new__4.js">
 </script>
 {/block:IfInfiniteScroll}
  {/block:IndexPage}
