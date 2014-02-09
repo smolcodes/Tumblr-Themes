@@ -78,7 +78,7 @@
 .||...|' .||  \\. dubious radical
 Title:Verbage
 Author:Dubious Radical
-Version:1.0.2
+Version:1.0.3
 Icons from Picons:http://picons.me/
 Questions? Ask @ www.dubiousradical.me
 -Learn German! Schon means Pretty
@@ -139,7 +139,7 @@ Questions? Ask @ www.dubiousradical.me
 <!--------------CSS--------------->
 <link rel="stylesheet" href="http://static.tumblr.com/wgijwsy/6lWma2908/normalize.min.css" type="text/css"/>
 <!--------------Font Awesome------------------>
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <script src="http://static.tumblr.com/smotcsf/nBdmx9k3g/run_prettify.js"></script>
 <style type="text/css">
 /* Pretty printing styles. Used with prettify.js. */
@@ -694,7 +694,7 @@ footer.metadata {
 {CustomCSS} 
 </style>
 	<body class="cbp-spmenu-push {select:Layout}">
-<div class="menuicon"><div class="button" id="showLeftPush"><h3><a href="#">&#9776; Menu</a></h3></div></div>
+<div class="menuicon"><div class="button" id="showLeftPush"><h3><a href="#"><i class="fa fa-bars"></i></a></h3></div></div>
       <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
             <a href="/">{Title}</a>  
         <a href="/archive">{lang:Archive}</a>
