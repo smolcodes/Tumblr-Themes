@@ -78,7 +78,7 @@
 .||...|' .||  \\. dubious radical
 Title:Verbage
 Author:Dubious Radical
-Version:1.1.0
+Version:1.1.2
 Icons from Picons:http://picons.me/
 Questions? Ask @ www.dubiousradical.me
 -Learn German! Schon means Pretty
@@ -123,17 +123,13 @@ Questions? Ask @ www.dubiousradical.me
 <meta name="text:Username on Flickr" content="" />
 <meta name="text:Username on Google Plus" content="" />
 <meta name="text:Username on Instagram" content="" />
-<meta name="text:Username on Deviantart" content=""/>
-<meta name="text:Username on Behance" content=""/>
 <meta name="text:Username on Dribbble" content=""/>
-<meta name="text:Username on LastFm" content="" />
 <meta name="text:Username on Linkedin" content="" />
-<meta name="text:Username on Myspace" content="" />
 <meta name="text:Username on Twitter" content="" />
 <meta name="text:Username on Vimeo" content="" />
 <meta name="text:Username on YouTube" content="" />
-<meta name="text:Username on Wordpress" content=""/>
 <meta name="text:Username on Pinterest" content=""/>
+<meta name="text:Username on Soundcloud" content=""/>
 <!-------------Google Fonts--------------------->
 <meta name="text:Google Font Title" content="Monda">
 <link href='http://fonts.googleapis.com/css?family={text:Google Font Title}' rel='stylesheet' type='text/css'/>
@@ -145,7 +141,7 @@ Questions? Ask @ www.dubiousradical.me
 <!--------------CSS--------------->
 <link rel="stylesheet" href="http://static.tumblr.com/wgijwsy/6lWma2908/normalize.min.css" type="text/css"/>
 <!--------------Font Awesome------------------>
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="http://static.tumblr.com/smotcsf/nBdmx9k3g/run_prettify.js"></script>
 <!-------------Math Jax----------------------->
 <script type="text/javascript"
@@ -209,7 +205,7 @@ html,body{
        -webkit-font-smoothing: antialiased;
         display: block;
         font: 600 12px/18px "Helvetica Neue","HelveticaNeue",Helvetica        ,Arial,sans-serif;
-        color: #FFF;
+        color: #fff;
         text-decoration: none;
         background-color: rgba(0,0,0,.38);
         border: solid 1px rgba(0,0,0,.18);
@@ -697,79 +693,40 @@ footer.metadata {
              <p>{Description}</p>
              </div>
     		      <ul class="smedia">
-      {block:IfUsernameOnFacebook}
-        <li>
-            <a href="http://www.facebook.com/{text:Username on Facebook}" id="facebook"><img src="http://static.tumblr.com/r4e6ztn/sdDmt3m0j/social-006_facebook.png"></a>
-        </li>
-        {/block:IfUsernameOnFacebook}     
-        {block:IfUsernameOnFlickr}
-        <li>
-            <a href="http://flickr.com/{text:Username on Flickr}" id="flickr"><img src="http://static.tumblr.com/r4e6ztn/oCYmt3moc/social-004_flickr.png"></a>
-        </li>
-        {/block:IfUsernameOnFlickr}     
-        {block:IfUsernameOnGooglePlus}
-        <li>
-            <a href="https://plus.google.com/{text:Username on Google Plus}"  id="google"><img src="http://static.tumblr.com/r4e6ztn/EbXmt3mfq/social-040_google_plus.png"></a>
-        </li>
-        {/block:IfUsernameOnGooglePlus}      
-        {block:IfUserNameonInstagram}
-        <li>
-            <a href="https://instagram.com/{text:Username on Instagram}" id="instagram"><img src="http://static.tumblr.com/r4e6ztn/NFBmt3me8/social-038_instagram.png"></a>
-        </li>
-        {/block:IfUserNameonInstagram}  
-              {block:IfUsernameonDeviantart}
-          <li><a href="http://www.{text:Username on Deviantart}.deviantart.com"><img src="http://static.tumblr.com/r4e6ztn/PZOmt3nsu/social-022_deviantart.png" alt="deviantart"></a>
-          </li>
-      {/block:IfUsernameonDeviantart}
-           {block:IfUserNameonBehance}
-        <li>
-            <a href="http://www.behance.net/{text:Username on Behance}" id="behance"><img src="http://static.tumblr.com/r4e6ztn/Hr9mt3ngu/social-037_behance.png"></a>
-        </li>
-        {/block:IfUserNameonBehance} 
-                 {block:IfUserNameonDribbble}
-        <li>
-            <a href="http://dribbble.com/{text:Username on Dribble}" id="dribbble"><img src="http://static.tumblr.com/r4e6ztn/dc3mtaq3w/social-042_dribbble.png"></a>
-        </li>
-        {/block:IfUserNameonDribbble} 
-        {block:IfUserNameonLastFM}
-        <li>
-            <a href="http://www.last.fm/user/{text:Username on LastFM}" id="lastfm"><img src="http://static.tumblr.com/r4e6ztn/vVnmt3m47/social-012_last_fm.png"></a>
-        </li>
-        {/block:IfUserNameonLastFM}      
-        {block:IfUsernameOnLinkedin}
-        <li>
-            <a href="http://www.linkedin.com/in/{text:Username on LinkedIn}" id="linkedin"><img src="http://static.tumblr.com/r4e6ztn/c5amt3m37/social-011_linkedin.png"></a>
-        </li>
-        {/block:IfUsernameOnLinkedin}        
-        {block:IfUserNameonMyspace}
-        <li>
-            <a href="http://myspace.com/{text:Username on Myspace}" id="myspace"><img src="http://static.tumblr.com/r4e6ztn/QtDmt3m6r/social-030_myspace.png"></a>
-        </li>
-        {/block:IfUserNameonMyspace}     
-        {block:IfUsernameOnTwitter}
-        <li>
-            <a href="http://www.twitter.com/{text:Username on Twitter}"  id="twitter"><img src="http://static.tumblr.com/r4e6ztn/dwrmt3m88/social-005_twitter.png"></a>
+       {block:IfUsernameOnFacebook}<li>
+        <a href="http://www.facebook.com/{text:Username on Facebook}" id="facebook"><i class="fa fa-facebook"></i></a>
+        </li>{/block:IfUsernameOnFacebook}     
+        {block:IfUsernameOnFlickr}<li>
+        <a href="http://flickr.com/{text:Username on Flickr}" id="flickr">
+        <i class="fa fa-flickr"></i></a>
+        </li>{/block:IfUsernameOnFlickr}     
+        {block:IfUsernameOnGooglePlus}<li>
+        <a href="https://plus.google.com/{text:Username on Google Plus}"  id="google"><i class="fa fa-google-plus"></i></a>
+        </li>{/block:IfUsernameOnGooglePlus}      
+        {block:IfUserNameonInstagram}<li>
+        <a href="https://instagram.com/{text:Username on Instagram}" id="instagram"<i class="fa fa-instagram"></i></a>
+        </li>{/block:IfUserNameonInstagram}
+        {block:IfUserNameonDribbble}<li>
+            <a href="http://dribbble.com/{text:Username on Dribble}" id="dribbble"><i class="fa fa-dribbble"></i></a>
+        </li>{/block:IfUserNameonDribbble} 
+        {block:IfUsernameOnLinkedin}<li>
+            <a href="http://www.linkedin.com/in/{text:Username on LinkedIn}" id="linkedin"><i class="fa fa-linkedin-square"></i></a>
+        </li>{/block:IfUsernameOnLinkedin}        
+        {block:IfUsernameOnTwitter}<li>
+            <a href="http://www.twitter.com/{text:Username on Twitter}"  id="twitter"><i class="fa fa-twitter"></i></a>
         </li>{/block:IfUsernameOnTwitter}   
-        {block:IfUserNameonVimeo}
-        <li>
-            <a href="http://vimeo.com/{text:Username on Vimeo}" id="vimeo"><img src="http://static.tumblr.com/r4e6ztn/f0tmt3m9p/social-013_vimeo.png"></a>
-        </li>
-        {/block:IfUserNameonVimeo}  
-        {block:IfUserNameonYouTube}
-        <li>
-            <a href="https://youtube.com/{text:Username on YouTube}" id="youtube"><img src="http://static.tumblr.com/r4e6ztn/S4pmt3mb4/social-018_youtube.png"></a>
-        </li>
-        {/block:IfUserNameonYouTube}
-           {block:IfUserNameonWordpress}
-        <li>
-           <a href="http://www.{text:Username on Wordpress}.wordpress.com/"><img src="http://static.tumblr.com/r4e6ztn/L7amt3n1j/social-026_wordpress.png"></a>
-        </li>
-        {/block:IfUserNameonWordpress}
-           {block:IfUserNameonPinterest}
-        <li>
-          <a href="http://pinterest.com/{text:Username on Pinterest}/"><img src="http://static.tumblr.com/r4e6ztn/yLZmt3n5t/social-033_pinterest.png"></a>
-        </li>
-        {/block:IfUserNameonPinterest}
+        {block:IfUserNameonVimeo}<li>
+            <a href="http://vimeo.com/{text:Username on Vimeo}" id="vimeo"><i class="fa fa-vimeo-square"></i></a>
+        </li>{/block:IfUserNameonVimeo}  
+        {block:IfUserNameonYouTube}<li>
+            <a href="https://youtube.com/{text:Username on YouTube}" id="youtube"><i class="fa fa-youtube"></i></a>
+        </li>{/block:IfUserNameonYouTube}
+           {block:IfUserNameonPinterest}<li>
+          <a href="http://pinterest.com/{text:Username on Pinterest}/"><i class="fa fa-pinterest-square"></i></a>
+        </li>{/block:IfUserNameonPinterest}
+          {block:IfUserNameonSoundcloud}<li>
+          <a href="https://soundcloud.com/{text:Username on Soundcloud}/"><i class="fa fa-soundcloud"></i></a>
+        </li>{/block:IfUserNameonSoundcloud}
  </ul>   
 				</center>
 			 {/block:IndexPage}
@@ -1013,6 +970,7 @@ function iResize() {
  {block:IndexPage}
 {block:IfInfiniteScroll}
 <script src="http://static.tumblr.com/wgijwsy/u2vm2hxv6/jquery.infinitescroll.min.js"></script>
+<script src="http://static.tumblr.com/r4e6ztn/encmu8gen/new__4.js">
 </script>
 {/block:IfInfiniteScroll}
  {/block:IndexPage}
@@ -1056,3 +1014,4 @@ function iResize() {
 		</script>
   </body>
 </html>
+
