@@ -1,0 +1,801 @@
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width">
+    <title>{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle}</title>
+    <meta property="og:title" content="{Title}" />
+    <meta property="og:site_name" content="{Title}" />
+    <meta name="description" content="{MetaDescription}" />
+    <meta property="og:description" content="{MetaDescription}" />
+    <meta property="og:url" content="{PortraitURL-64}" />
+    <meta property="og:type" content="blog" />
+      <!-- FACEBOOK OPEN GRAPH -->
+  <!----------------------------->
+  <meta property="og:site_name" content="{Title}"/>
+  {block:PermalinkPage}
+    <meta property="og:url" content="{Permalink}"/>
+    <meta property="og:type" content="article"/>
+    {block:Posts}
+      {block:Text}
+        {block:Title}<meta property="og:title" content="{PlaintextTitle}"/>{/block:Title}
+        <meta property="og:description" content="{PlaintextBody}"/>
+      {/block:Text}
+      {block:Photo}
+        <meta property="og:image" content="{PhotoURL-500}"/>
+        {block:Caption}<meta property="og:description" content="{PlaintextCaption}"/>{/block:Caption}
+      {/block:Photo}
+      {block:Photoset}
+        {block:Photos}<meta property="og:image" content="{PhotoURL-500}"/>{/block:Photos}
+        {block:Caption}<meta property="og:description" content="{PlaintextCaption}"/>{/block:Caption}
+      {/block:Photoset}
+      {block:Quote}
+        <meta property="og:title" content="{PlaintextQuote}"/>
+        <meta property="og:description" content="{PlaintextSource}"/>
+        <meta property="og:image" content="{PortraitURL-64}"/>
+      {/block:Quote}
+      {block:Link}
+        <meta property="og:title" content="{PlaintextName}"/>
+        <meta property="og:description" content="{PlaintextDescription}"/>
+        <meta property="og:image" content="{PortraitURL-64}"/>
+      {/block:Link}
+      {block:Chat}
+        <meta property="og:title" content="{PlaintextTitle}"/>
+        <meta property="og:description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}"/>
+        <meta property="og:image" content="{PortraitURL-64}"/>
+      {/block:Chat}
+      {block:Audio}
+        <meta property="og:title" content="{block:Artist}{Artist} - {/block:Artist}{block:TrackName}{TrackName}{/block:TrackName}"/>
+        <meta property="og:description" content="{PlaintextCaption}"/>
+        {block:AlbumArt}<meta property="og:image" content="{AlbumArtURL}"/>{/block:AlbumArt}
+      {/block:Audio}
+      {block:Video}
+        {block:Caption}<meta property="og:description" content="{PlaintextCaption}"/>{/block:Caption}
+      {/block:Video}
+      {block:Answer}
+        <meta property="og:title" content="{PlaintextQuestion}"/>
+        <meta property="og:description" content="{PlaintextAnswer}"/>
+        <meta property="og:image" content="{PortraitURL-64}"/>
+      {/block:Answer}
+    {/block:Posts}
+  {/block:PermalinkPage}
+  {block:IndexPage}
+    <meta property="og:title" content="{Title}"/>
+    <meta property="og:type" content="blog"/>
+    <meta property="og:description" content="{MetaDescription}"/>
+    <meta property="og:image" content="{PortraitURL-64}"/>
+  {/block:IndexPage}
+  <link rel="shortcut icon" href="{Favicon}" />
+  <link rel="apple-touch-icon" href="{PortraitURL-128}" />
+  <link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+    <!--[if IE]>
+<link href="http://static.tumblr.com/r4e6ztn/6anmxk6o1/ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!---
+Title: Sublime
+Author:Slurppi
+Version:1.0.0
+Icons from Font Awesome
+Questions? Ask @ www.dubiousradical.tumblr.com/ask or 
+rbrittbusler92@gmail.com
+---->
+<meta name="image:Background" content=""/>
+<meta name="color:Background" content="#ffffff">
+<meta name="color:Content" content="#ffffff">
+<meta name="color:About Text" content="#ffffff">
+<meta name="color:Body Text" content="#565656"/>
+<meta name="color:Quote Text" content="#565656"/>
+<meta name="color:Main" content="#eff0f1"/>
+<meta name="color:Link" content="#e17e66"/>
+<meta name="color:Link Hover" content="#9ad7b9"/>
+<meta name="color:Tooltip" content="#eff0f1"/>
+<!---Select--->
+<meta name="select:Background Attachment"  content="fixed" title="Fixed">
+<meta name="select:Background Attachment"  content="static" title="Static">
+<!-------------Text Inputs--------------------->
+<meta name="text:Title Font Size" content="55px"/>
+<meta name="text:Google Analytics ID" content=""/>
+<meta name="text:Disqus Shortname" content=""/>
+<meta name="text:Tag 1" content=""/>
+<meta name="text:Tag 2" content=""/>
+<meta name="text:Tag 3" content=""/>
+<meta name="text:Tag 4" content=""/>
+<meta name="text:Tag 5" content=""/>
+<!-------------Google Fonts--------------------->
+<meta name="text:Google Font Title" content="Dosis">
+<meta name="text:Google Font About" content="Dosis">
+<meta name="text:Google Font Body" content=" "TImes New Roman" ">
+<meta name="text:Google Font Quote" content="Roboto">
+<link rel="stylesheet" type="text/css" href="http://static.tumblr.com/r4e6ztn/blkmpj4g4/default.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<style type="text/css">
+/* Pretty printing styles. Used with prettify.js. */
+/* desert scheme ported from vim to google prettify */
+/* desert scheme ported from vim to google prettify */
+pre { display: block; color:{color:Body Text}; background: {color:Tooltip};}
+pre .nocode { background-color: none; color:{color:Body Text}; }
+pre .str { color: #ffa0a0 } /* string  - pink */
+pre .kwd { color: #f0e68c; font-weight: bold }
+pre .com { color: #87ceeb } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type    - lightgreen */
+pre .lit { color: #cd5c5c } /* literal - darkred */
+pre .pun { color:{color:Body Text}; }    /* punctuation */
+pre .pln { color:{color:Body Text}; }    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal         - lightgreen */
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+@media print {
+  pre { background-color: none }
+  pre .str, code .str { color: #060 }
+  pre .kwd, code .kwd { color: #006; font-weight: bold }
+  pre .com, code .com { color: #600; font-style: italic }
+  pre .typ, code .typ { color: #404; font-weight: bold }
+  pre .lit, code .lit { color: #044 }
+  pre .pun, code .pun { color: #440 }
+  pre .pln, code .pln { color: #000 }
+  pre .tag, code .tag { color: #006; font-weight: bold }
+  pre .atn, code .atn { color: #404 }
+  pre .atv, code .atv { color: #060 }
+            }
+.content pre code {background-color:inherit; color:inherit}
+.content pre      { padding:1em; margin: 0.5em 0px; }
+</style>
+</head>
+<style type="text/css">
+/***Body****/
+/* Pretty printing styles. Used with prettify.js. */
+@import url('https://fonts.googleapis.com/css?family={text:Google Font Title}');
+@import url('https://fonts.googleapis.com/css?family={text:Google Font About}');
+@import url('https://fonts.googleapis.com/css?family={text:Google Font Subtitle}');
+@import url('https://fonts.googleapis.com/css?family={text:Google Font Body}');
+@import url('https://fonts.googleapis.com/css?family={text:Google Font Quote}');
+html,body{
+          overflow-x: hidden;
+          margin: 0 auto;
+          padding: 0px;
+          font:16px {text:Google Font Body};
+          line-height:28px;
+          color: {color:Body Text};
+          overflow-x:hidden;
+          background:{color:Background} url({image:Background});
+          background-attachment:{select:Background Attachment};
+                -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+          }
+a:hover {color:{color:Link Hover};}
+a {
+   text-decoration: none;
+   color: {color:Link};
+   border:none;
+   transition:color 0.3s ease;
+   -html-transition:color 0.3s ease;
+   -webkit-transition:color 0.3s ease;
+  }
+h1, h2, h3, h4,h5, h6 {
+                     font-family:{text:Google Font Title};
+                     color:{color:Link Hover};
+                      }
+/* Orientation-dependent styles for the content of the menu */
+.t {line-height:30px;
+    font-size:20px;
+}
+.title a:hover { color: {TitleColor};}   
+.menu {float:right;
+       position:fixed;
+       width:30%;
+       margin-left:10%;
+       height:100%;
+       text-align:right;
+      
+}
+/***Posts***/
+ .content {
+       float:right;
+           width:50%;
+           margin-right:8%;
+         }
+.post {
+      position:relative;
+      width:100%;
+           margin-bottom:10%;
+}
+.about {font:18px {text:Google Font About};
+        line-height:25px;
+        margin:0 auto;
+        color:{color:About Text};
+        padding:10%;
+} 
+.profile {margin:0 auto;}
+.profile img {box-shadow: 10px 5px 0px {color:About Border};
+              margin:0 auto;
+              border-radius:50%;
+}
+.stuff {
+     padding:8%;
+     background:{color:Main};
+     z-index:1000;
+      }
+.t a {font-size:36px;}
+/***Post Decour***/
+#left {float:left; padding-right:2%; padding-bottom:2%; margin:0; max-width:40%;}
+#right {float:right;padding-left:2%; padding-bottom:2%; margin:0; max-width:40%;}
+#center {margin:0 auto;}
+.highlightred {background: rgba(223,96,96,.3);}
+.highlightblue {background: rgba(126,219,226,.3);}
+.highlightyellow {background: rgba(242,218,62,.3);}
+/*****TOOLTIP*****/
+/*****ANIMATIONS*****/
+.tooltip {
+	transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+         }
+.tooltip:hover {color:{color:Tooltip};}
+.tooltip span {
+	background:{color:Tooltip};
+	pointer-events: none;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	bottom: 0;
+	transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-webkit-transition: all 0.25s ease-in-out;
+              }
+.tooltip:hover span {
+	pointer-events: auto;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	bottom: 30px;
+                   }
+/*****END ANIMATIONS*****/
+
+.tooltip {
+	font-weight: 700;
+	color: #3b3b3b;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+         }
+.tooltip span {
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 400;
+	color: #fff;
+	min-width: 150px;
+	max-width: 300px;
+	padding: 12px 20px;
+	left: -30%;
+	margin-left: -35px;
+	display: block;
+	position: absolute;
+	z-index: 30;
+          }
+.tooltip:hover span {display: block;}
+.tooltip span:before, .tooltip span:after /* Triangle */ {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid {color:Tooltip};
+	z-index: 29;
+        }
+.tooltip span img {
+	max-width: 300px; /* Maximum width of image to display. probably don't want any larger or else it will be too distracting. */
+	padding: 6px 0;
+	clear: right;
+                 }
+.tooltip:hover {color:{color:Tooltip};}
+.tooltip span {background:{color:Tooltip};}
+/***end Post Decor***/
+iframe, img, embed, object, video {max-width: 100%; } 
+blockquote {
+    padding-left: 2%;
+    margin-left:1%;
+    border-left: 1px solid {color:Link};    
+           }
+.photo {clear:both;}
+.chatlines {
+               padding:0; margin:0;
+               width:100%;
+           }
+.chatlines li {
+          list-style:none;
+          padding:2%; 
+          margin:none;
+          }
+.chatlines .even .label {color: {color:Main}; font-weight:bold;}
+.chatlines .even {
+                 border-top:1px dashed {color:Main};
+                 border-bottom:1px solid {color:Main};
+                }
+.chatlines .odd .label {color: {color:Link Hover}; font-weight:bold;}
+.label {padding-right:2%;}
+.musiccontent {
+              padding:3%;
+              width:100%;
+              position:relative;
+               -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+              }
+.music_menu { 
+         margin:none;
+         list-style:none;
+          padding:5%;
+           }
+.music_menu li {
+            list-style:none;
+            margin: 0px;
+            margin-bottom:4px;
+            color:{color:link hover};
+            text-decoration:none;
+            font-size:18px;
+            font-family:verdana;
+            padding:2%;
+           }
+.info {background:white;
+        padding:2%;
+}
+.content-photo {margin:0 auto;
+}
+.video {padding:2%;}
+.g {
+   padding:4%;
+   margin:0 auto;
+   margin-bottom:6%;
+   background:{color:Tooltip} url("{image:Quote}");
+   }
+.g h1 {border:2px solid {color:Quote Text}; padding:4%;color:{color:Quote Text};}
+body .spotify_audio_player{height:80px!important; width:80%;}
+body .spotify_audio_player .player{
+    -moz-border-radius:0!important;-webkit-border-radius:0!important;border-radius:0!important;
+}
+/***Notes/Tags***/
+ol.notes {
+                padding: 0px;
+                list-style-type: none;
+         }
+ol.notes li.note {
+                padding: 10px;
+                list-style:none;
+                }
+ol.notes li.note img.avatar {
+                width: 50px;
+                height: 50px;
+                border-radius:180px;
+                -moz-border-radius:180px;
+                -webkit-border-radius:180px;
+                -html-border-radius:180px;
+                            }
+ol.notes li.note span.action {font-weight: bold;}
+ol.notes li.note .answer_content {font-weight: normal;}
+ol.notes li.note blockquote {
+                border-color: #eee;
+                padding: 4px 10px;
+                margin: 10px 0px 0px 10px;
+                             }
+ol.notes li.note blockquote a {text-decoration: none;}
+.like_and_reblog_buttons li {display:inline; float:left; margin-top:-34px;}
+footer.metadata {
+       margin:none;
+               }
+.metadata {margin-top:40px;}
+.metadata .index{ 
+         padding: 4px;
+         margin:none;
+         font-size:14px;
+         text-align:center;
+                }
+.metadata a {padding-right:1%;}
+.metadata a:hover {color:{color:Link Hover};}
+.metacolor {padding:10px;
+            color:{color:Content};
+            background:{color:Link};
+}
+.more {margin-top:5%;}
+.more a {padding:3%;
+        color:{color:Main}; 
+        background:{color:Tooltip};
+        text-align:center;
+        border-radius:35px;
+}
+.more a:hover {color:{color:Main};
+               background:{color:Link Hover};
+}
+.index {
+          font-size: 10px;
+          line-height:16px;
+          list-style:none;
+          margin:0;
+          padding:0;
+          color:#aaa;
+}
+          .index li{
+              display:inline;
+              padding:0px;
+              margin:0px;
+              padding-right:16px;
+              padding-top:16px;
+              padding-bottom:16px;}
+              .tags {clear:both;}
+              .tags li {display:inline-block;}
+              .tags li a {font-size:12px; color:white;padding:10px;background:{color:link};}
+              .tags li a:hover, #js-tags ul a:hover {border:none; background: {color:Link Hover}; color: white;}
+              .abouttags a{width:100%;
+                          display:block;
+              }
+              
+/***Pagination***/
+.pagination {
+          margin:0 auto;
+         position:relative;
+         z-index:100000;
+         text-align:center;
+                      }
+.pagination a{
+            color:{color:Link};
+            background:{TitleColor};
+            text-align:center;
+            padding:2%;
+            display:inline-block;
+            text-decoration:none;
+            margin:0px;
+            text-transform:uppercase;
+           font-size: 2em; /* 36px */
+			line-height: 1em; /* 36px */
+                       }
+                       .pagination .current_page{
+            color:{color:Link};
+            background:{color:Main};
+            text-align:center;
+            padding:2%;
+            display:inline-block;
+            text-decoration:none;
+            margin:0px;
+            text-transform:uppercase;
+           font-size: 2em; /* 36px */
+			line-height: 1em; /* 36px */
+                       }
+.pagination a:hover {color:{color:Link};
+                     background:{color:Tooltip};
+}
+.tags {margin-top:5%;
+}
+.tags a {background:{color:Tooltip};
+border:none;
+}
+/***Footer****/
+@media only screen and (max-width:1060px){
+      header {
+         height:auto;
+        color:{color:Description};
+        float:none;
+        width:100%;
+        position:static;
+        z-index:0;
+       }
+         body .spotify_audio_player{height:80px!important; width:100%;}
+       .post {margin-bottom:0px;
+      width:100%; 
+               }
+    .menu {float:none;
+    position:static;
+    width:80%;
+    }
+    .profile img {box-shadow: 10px 5px 0px {color:About Border};
+          margin-top:-20%;
+}
+   .content {
+                width:100%;
+                margin:0 auto;
+                }
+    .stuff {width:90%;}
+    footer.metadata {
+       margin:none;
+       width:95%;
+       margin:0 auto;
+       margin-top:2%;
+               }
+    #disqus_thread {
+                width:100%;
+                padding:3%;
+                margin:0 auto;
+                  }    
+                  html,body{
+      -webkit-background-size: auto;
+      -moz-background-size: auto;
+      -o-background-size: auto;
+       background-size: auto;
+          }
+                }
+#disqus_thread {
+                width:78%;
+                padding:3%;
+                margin:0 auto;
+                }    
+.dsq-comment-message {font-size: 14px; }
+#dsq-pagination {
+                 font-size: 12px;  
+                  margin-top: 35px;
+                 }
+.dsq-comment-meta a, .dsq-comment-actions a {
+            color: #f1446f !important;   
+            opacity: 1 !important;
+            font-size: 12px;
+                                            }
+.dsq-brlink{margin-left: 108px;}
+.dsq-comment-count {
+                    font-size: 12px; 
+                    text-align: left; 
+                    padding-top:6%; 
+                    clear:both;
+                    }
+/***Reseume***/
+{CustomCSS} 
+</style>
+<body>
+<!---Banner--->
+<div id="container">
+<nav class="menu overlay {select:Header Overlay Opacity}">
+    <div class="about post">
+    <img src="{PortraitURL-48}" style="border-radius:50%">
+<h2><a href="/">{Title}</a></h2>
+{Description}
+</div>
+<div class="abouttags about">
+     <a href="/archive">{lang:Archive}</a>
+                    {block:HasPages}
+                    {block:Pages}    
+                    <a href={URL}>{Label}</a>
+                    {/block:Pages}
+                    {/block:HasPages}
+                    {block:AskEnabled}
+                     <a href="/ask">{AskLabel}</a>
+                    {/block:AskEnabled}
+{block:ifTag1}
+    <a href="/tagged/{text:Tag 1}">{text:Tag 1}</a>
+    {/block:ifTag1}
+    {block:ifTag2}
+     <a href="/tagged/{text:Tag 2}">{text:Tag 2}</a>
+     {/block:ifTag2}
+     {block:ifTag3}
+      <a href="/tagged/{text:Tag 3}">{text:Tag 3}</a>
+      {/block:ifTag3}
+      {block:ifTag4}
+       <a href="/tagged/{text:Tag 4}">{text:Tag 4}</a>
+       {/block:ifTag4}
+       {block:ifTag5}
+        <a href="/tagged/{text:Tag 5}">{text:Tag 5}</a>
+        {/block:ifTag5}
+</div>
+</nav>
+<!---Posts--->
+<div class="content ">
+<!-- DivTable.com -->
+{block:Posts}
+  <article id="{PostI} "  class=" type_{PostType} post">
+<!---------Text-------->
+     {block:Text}
+     <div class="stuff">
+       {block:Title}
+      <h1 class="t"><a href="{Permalink}">{Title}</a></h1>
+         {/block:Title}
+             <p><a class="metacolor"  href="{Permalink}"><time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</time></a></p>
+             <div class="captions">
+     {Body}
+        {block:More} 
+        <div class="more">
+			<a href="{Permalink}">{lang:Read more}</a>
+			</div>
+        {/block:More} 
+        </div>
+        </div>
+        {/block:Text}      
+<!---------Photo-------->
+        {block:Photo}
+            {LinkOpenTag}
+         <img class="pic" src="{PhotoURL-HighRes}" alt="{PhotoAlt}"width="100%"/>
+            {LinkCloseTag}
+            	{block:Caption}
+				<div class="stuff drop" style="margin-top:-12%;">
+				             <p style=" margin-bottom:8%;"><a class="metacolor"  href="{Permalink}"> <i class="far fa-clock"></i> <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</time></a></p>
+				 <div class="captions">
+					{Caption}		 {block:More} 
+			<div class="more">
+			<a href="{Permalink}">{lang:Read more}</a>
+			</div>
+        {/block:More} 
+               </div>
+               	</div>
+				{/block:Caption}
+        {/block:Photo}
+<!---------Photo Set-------->
+         {block:Photoset}
+            <div class="pho">{Photoset} </div>
+	     {block:Caption}
+   <div class="stuff drop">
+    <div class="captions">
+   {Caption}
+       {block:More} 
+			<div class="more">
+			<a href="{Permalink}">{lang:Read more}</a>
+			</div>
+        {/block:More} 
+        </div>
+        </div>
+         {/block:Caption}
+         {/block:Photoset}
+<!---------Quote-------->
+        {block:Quote}
+        <div class="g">
+   <h1 style="font-family:{text:Google Font Quote};line-height:30px;" >"{Quote}"</h1>
+          </div>
+  {block:Source}<div class="stuff">
+   <div class="captions">
+  <cite><p align="right"> -{Source} </p></cite>   {block:More} 
+			<div class="more">
+			<a href="{Permalink}">{lang:Read more}</a>
+			</div>
+        {/block:More}
+        </div>
+        </div>{/block:Source}
+        {/block:Quote}
+<!---------Link-------->
+        {block:Link}
+        <div class="stuff">
+<h1 class="t"><a href="{URL}">{Name} &#8594;</a></h1>
+<h3><a class="metacolor" href="{Permalink}"><time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</time></a></h3>
+          {block:Description} <div class="captions">{Description} {block:More} 
+			<div class="more">
+			<a href="{Permalink}">{lang:Read more}</a>
+			</div>
+        {/block:More}</div> {/block:Description}
+        </div>
+        {/block:Link}
+<!---------Chat-------->
+        {block:Chat}
+          <div class="stuff">
+                            {block:Title}
+      <h1 class="t"><a href="{Permalink}">{Title}</a></h1>
+         {/block:Title}
+           <ul class="chatlines">
+			{block:Lines}
+	<li class="{Alt}">
+	{block:Label}<span class="label">{Label}</label></span>{/block:Label}
+	<span class="line">{Line}</span>
+	</li>
+			{/block:Lines}
+		  </ul>
+		  </div>
+        {/block:Chat}
+<!---------Audio-------->
+         {block:Audio}
+      <div class="musiccontent" style=" {block:AlbumArt}
+               background:url({AlbumArtURL});
+               {/block:AlbumArt}  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
+               <ul class="music_menu">
+                 <li>{AudioPlayerWhite}</li>
+                 {block:TrackName}<li><span class="info">{TrackName}</span></li>{/block:TrackName}
+                 {block:Album}<li><span class="info">{Album}</span></li>{/block:Album}
+                 {block:Artist}<li><span class="info">{Artist}</span></li>{/block:Artist}
+               </ul>
+        </div>
+     <div class="stuff">
+      <div class="captions">
+     <p>{Caption}</p>
+         {block:More} 
+			<div class="more">
+			<a href="{Permalink}">{lang:Read more}</a>
+			</div>
+        {/block:More} 
+        </div></div>
+        {/block:Audio}
+<!---------Video-------->
+        {block:Video}
+   <center>{Video-700}</center>
+   <div class="stuff drop">
+    <div class="captions">
+   {Caption}
+       {block:More} 
+			<div class="more">
+			<a href="{Permalink}">{lang:Read more}</a>
+			</div>
+        {/block:More} 
+        </div></div>
+        {/block:Video}
+<!---------Question and Answer-------->
+        {block:Answer}
+         <div style="background:{color:Tooltip};padding:5%;">
+         <h1><img src="{AskerPortraitURL-48}" style="border-radius:180px;-moz-border-radius:180px;-webkit-border-radius:180px;-html-border-radius:180px; margin-bottom:-8px;">  {Asker} <i>asked</i>:</h1>
+        <h2 style="font-size:20px; font-family: {text:Google Font Quote};">{Question}</h2>
+          </div>
+            <div class="stuff drop">
+             <p style="margin-top:-16%; margin-bottom:8%;"><a class="metacolor" href="{Permalink}"> <i class="far fa-clock"></i> <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</time></a></p>
+              <div class="captions">
+          <div class="answer"><p>{Answer}</p></div>
+              {block:More} 
+			<div class="more">
+			<a href="{Permalink}">{lang:Read more}</a>
+			</div>
+        {/block:More} 
+        </div></div>
+        {/block:Answer}
+<!-----------Date and Metadata--------------->
+        {block:Date}
+    <footer class="metadata">
+         <ul class="index">
+            <li><a href="{Permalink}">{TimeAgo}</a></li>
+                                               {block:IfDisqusShortname} <li>
+<a class="metacolor" href="{Permalink}#disqus_thread"><i class="icon-comment"></i>/  Comments</a></li> {/block:IfDisqusShortname}
+        </ul>
+               <ul class="index tags">
+                 {block:NoteCount}
+                                 {block:ContentSource}
+                <li><a href="{SourceURL}">{lang:Source}: {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
+                {block:SourceLogo}
+            <img src="{BlackLogoURL}" width="{LogoWidth}"height="{LogoHeight}" alt="{SourceTitle}" />
+                {/block:SourceLogo}</a></li> 
+                {/block:ContentSource} 
+               <li> <i class="icon-link"></i> <a href="{Permalink}#notes">{NoteCountWithLabel}</a></li>
+                {/block:NoteCount}
+              {block:HasTags}
+    {block:Tags}<li><a href="{TagURL}">#{Tag}</a></li>{/block:Tags}
+            {/block:HasTags}
+              </ul>
+            </footer>
+     <!---------------------Disqus Comments-------------------------->
+         {block:PermalinkPage}
+             {block:IfDisqusShortname}
+            {block:Permalink}
+           <div id="disqus_thread" style="padding-bottom: 2em;"></div>
+          <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+<noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+            {/block:Permalink}
+            {/block:IfDisqusShortname}
+            {block:PostNotes}
+            <div class="stuff">
+            {PostNotes-64}</div>
+            {/block:PostNotes}
+{/block:PermalinkPage} 
+        {/block:Date}
+     </article>
+    {/block:Posts}
+  {block:Pagination}
+  <div class="pagination">
+  {block:PreviousPage}
+                <a href="{PreviousPage}">Previous</a>
+            {/block:PreviousPage}{block:JumpPagination length="5"}{block:CurrentPage}
+                    <span class="current_page">{PageNumber}</span>
+                {/block:CurrentPage}{block:JumpPage}
+                    <a class="jump_page" href="{URL}">{PageNumber}</a>
+                {/block:JumpPage}{/block:JumpPagination}{block:NextPage}
+                <a href="{NextPage}">Next</a>
+            {/block:NextPage}
+            </div>
+{/block:Pagination}
+<div style="clear:both">
+    <center>
+<h2><a href="/">&#169; {Title}</a></h1><p><a href="https://www.tumblr.com/themes/by/slurppi">Theme</a> by <a href="http://www.slurppi.tumblr.com">Slurppi</a></p>
+</center>
+</div>
+</div>
+  </body>
+</html>
