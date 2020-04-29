@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirect - Blob backgrounds</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Bree Serif');
+@import url('https://fonts.googleapis.com/css?family=Source Sans Pro');
+* {
+  margin:0px;
+  padding:0px;
+  top:0px;
+  left:0px;
+}
+body {
+    color:hsl(0, 0%, 30%);
+    background:hsl(224, 73%, 93%);
+    font:36px Source Sans Pro;
+    line-height:calc(36px+10px);
+    height:100vh;
+   overflow:hidden;
+}
+.tmblr-iframe {
+    display:none;
+}
+h1 {
+    font:72px Bree Serif;
+    line-height:82px;
+    font-weight:bold;
+    color:hsl(348, 100%, 58%);
+}
+a {
+  color:hsl(224, 73%, 33%);
+}
+a:hover {
+  color:hsl(348, 100%, 61%);
+}
+body:before, body:after {
+    content: "";
+    position: fixed;
+    background: hsl(0, 0%, 100%);
+    left: 0;
+    right: 0;
+    height: 20px;
+}
+body:before {
+    top: 0;
+}
+body:after {
+    bottom: 0;
+}
+body {
+    border-left: 20px solid hsl(0, 0%, 100%);
+    border-right: 20px solid hsl(0, 0%, 100%); 
+}
+.blobbackground {
+  top:0px;
+  left:0px;
+   margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  align-items: center;
+}
+.blob {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  fill: hsl(224, 73%, 83%);
+  width: 20vmax;
+  animation: move 7s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+.blob2 {
+ animation: move 15s ease-in-out infinite;
+  width: 40vmax;
+  fill:hsl(348, 100%, 95%);
+}
+.blob3 {
+ animation: move 10s ease-in-out infinite;
+  width: 30vmax;
+  stroke:hsl(348, 100%, 81%);
+  fill:none;
+  stroke-width: 3px;
+  stroke-dasharray: 2,2;
+}
+@keyframes move {
+  0%   { transform: scale(1)   translate(10px, -30px); }
+  38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+  40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+  78%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+  80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+  100% { transform: scale(1)   translate(10px, -30px); }
+}
+main {
+  top:0px;
+  left:0px;
+  padding-top:15%;
+  width:70%;
+  margin:0 auto;
+  vertical-align: middle;
+  position:relative;
+  z-index:30;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body>
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+<div class="blobbackground">
+<div class="blob">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
+<path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z" />
+</svg>
+</div>
+<div class="blob blob2">
+
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
+<path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z" />
+</svg>
+</div>
+<div class="blob blob3">
+
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
+<path d="M156.4,339.5c31.8-2.5,59.4-26.8,80.2-48.5c28.3-29.5,40.5-47,56.1-85.1c14-34.3,20.7-75.6,2.3-111  c-18.1-34.8-55.7-58-90.4-72.3c-11.7-4.8-24.1-8.8-36.8-11.5l-0.9-0.9l-0.6,0.6c-27.7-5.8-56.6-6-82.4,3c-38.8,13.6-64,48.8-66.8,90.3c-3,43.9,17.8,88.3,33.7,128.8c5.3,13.5,10.4,27.1,14.9,40.9C77.5,309.9,111,343,156.4,339.5z" />
+</svg>
+</div>
+</div>
+<main>
+<h1>
+Hellow There 👋
+</h1>
+<h1>
+I've Moved</h1>
+<p>Old name was oldName. Find me now at <a href="yourURL">newName</a></p>
+</main>
+</body>
+</html>
